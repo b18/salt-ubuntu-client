@@ -1,0 +1,3 @@
+# Managed by SaltStack
+
+deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_15.04/ /
