@@ -39,8 +39,8 @@ First, create the local directory needed, if not already there:
 Move into this directory:
 > \# cd /srv/salt/
 
-Next, clone this repository into your base Salt directory.. **NOTE: THIS DIRECTORY MUST BE EMPTY IN ORDER TO CLONE THIS REPO SUCCESSFULLY.
-IF YOU'RE ALREADY USING SALTSTACK, PLEASE MAKE THIS DIRECTORY EMPTY AND RETRY**:
+Next, clone this repository into your base Salt directory. (Please note that the /srv/salt/ directory must be empty in order to
+proceed:
 > \# sudo git clone git@github.com:b18/ubuntu-client-salt
 
 ###Using Salt###
