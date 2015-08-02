@@ -16,4 +16,5 @@ base:
     - ubuntu-client.pkgs.python-software-properties
 
     # System Config
+    - ubuntu-client.system.cron-highstate
     - ubuntu-client.system.sysctl
