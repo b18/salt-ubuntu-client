@@ -17,4 +17,5 @@ base:
 
     # System Config
     - ubuntu-client.system.cron-highstate
+    - ubuntu-client.system.minion-config
     - ubuntu-client.system.sysctl
