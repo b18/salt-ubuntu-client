@@ -9,6 +9,10 @@ gnome-mahjongg:
   pkg.removed:
     - name: gnome-mahjongg
 
+gnome-mines:
+  pkg.removed:
+    - name: gnome-mines
+
 gnome-sudoku:
   pkg.removed:
     - name: gnome-sudoku 

@@ -15,12 +15,15 @@ base:
     - ubuntu-client.pkgs.pac
     - ubuntu-client.pkgs.python-gpgme
     - ubuntu-client.pkgs.python-software-properties
+    - ubuntu-client.pkgs.traceroute
     - ubuntu-client.pkgs.ufw
+    - ubuntu-client.pkgs.vpnc
     - ubuntu-client.pkgs.wireshark
 
     # Packages Removed
     - ubuntu-client.pkgs_removed.avahi
     - ubuntu-client.pkgs_removed.games
+    - ubuntu-client.pkgs_removed.web-chat
 
     # System Config
     - ubuntu-client.system.cron-highstate
