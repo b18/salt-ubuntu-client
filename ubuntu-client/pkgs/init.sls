@@ -4,4 +4,6 @@ include:
   - ubuntu-client.pkgs.keepass
   - ubuntu-client.pkgs.nmap
   - ubuntu-client.pkgs.owncloud-client
+  - ubuntu-client.pkgs.pac
+  - ubuntu-client.pkgs.python-gpgme
   - ubuntu-client.pkgs.python-software-properties

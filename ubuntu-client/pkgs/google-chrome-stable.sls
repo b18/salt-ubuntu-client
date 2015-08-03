@@ -21,7 +21,7 @@ google.key:
 # <--STEP THREE-->
 # Install Google-Chrome-Stable
 google-chrome-stable:
-  pkg.installed:
+  pkg.latest:
     - name: google-chrome-stable
     - require:
       - file: /etc/apt/sources.list.d/google-chrome.list

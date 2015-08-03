@@ -15,8 +15,15 @@ base:
     - ubuntu-client.pkgs.pac
     - ubuntu-client.pkgs.python-gpgme
     - ubuntu-client.pkgs.python-software-properties
+    - ubuntu-client.pkgs.ufw
+    - ubuntu-client.pkgs.wireshark
+
+    # Packages Removed
+    - ubuntu-client.pkgs_removed.avahi
+    - ubuntu-client.pkgs_removed.games
 
     # System Config
     - ubuntu-client.system.cron-highstate
+    - ubuntu-client.system.lightdm
     - ubuntu-client.system.minion-config
     - ubuntu-client.system.sysctl

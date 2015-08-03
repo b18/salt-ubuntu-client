@@ -1,4 +1,4 @@
-sysctl_config:
+/etc/sysctl.conf:
   file.managed:
     - name: /etc/sysctl.conf
     - source: salt://ubuntu-client/files/etc/sysctl.conf
@@ -6,9 +6,9 @@ sysctl_config:
     - group: root
     - mode: 644
 
-# <--Reload SysCtl if conf file changes-->
+# Reload sysctl if config file changes
 sysctl_reload:
   cmd.wait:
     - name: sysctl -p
     - watch:
-      - file: sysctl_config
+      - file: /etc/sysctl.conf
