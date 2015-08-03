@@ -58,7 +58,14 @@ ran:
 > \# sudo salt-call --local state.highstate
 
 To delete any local changes you've made in /srv/salt, and pull down the latest updates from GitHub for this repository, run the following
-commands:
-> \# git fetch origin
+commands.. First go into the correct directory:
+> \# cd /srv/salt/
 
-> \# git reset --hard origin/master
+Then, fetch changes:
+> \# sudo git fetch origin
+
+Then, get the status:
+> \# sudo git status
+
+Then, get the latest version:
+> \# sudo git pull
