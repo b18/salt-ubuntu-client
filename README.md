@@ -57,6 +57,7 @@ So, you're done! Every hour moving forward, the configuration in /srv/salt will 
 software remains installed, and the configurations in place. If you ever want to manually run Salt and not wait for the Cron
 job to run, do so with the last command you ran above.
 
+###Getting updates###
 To pull down the latest updates from this GitHub repo, run the following
 commands.. First go into the correct directory:
 > \# cd /srv/salt/
