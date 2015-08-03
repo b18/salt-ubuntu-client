@@ -13,22 +13,27 @@ If anyone using this repository wishes for me to add other Ubuntu versions, plea
 ###Prerequisites###
 Please complete all prerequisite items before cloning the repository.
 
-Install Git first:
-> \# sudo apt-get install git
-
-Then, add the SaltStack repository:
-> \# sudo add-apt-repository ppa:saltstack/salt
+Add the SaltStack repository:
+> sudo add-apt-repository ppa:saltstack/salt
 
 When prompted to hit Enter to continue, do so. Next, you'll need to refresh the apt-get cache:
-> \# sudo apt-get update
+> sudo apt-get update
 
-Then, install salt-minion:
-> \# sudo apt-get install salt-minion
+Then, install salt-minion and git packages:
+> sudo apt-get install salt-minion git
 
-Lastly, stop the Salt-Minion daemon & remove from startup. The daemon is in no way needed for a standalone minion:
-> \# sudo service salt-minion stop
+Stop the Salt-Minion daemon & remove from startup. The daemon is in no way needed for a standalone minion:
+> sudo service salt-minion stop
 
-> \# sudo update-rc.d salt-minion remove
+> sudo update-rc.d salt-minion remove
+
+Add PATH and SHELL variables to root user's crontab..
+> sudo crontab -e
+
+..and add the following lines:
+> SHELL=/bin/sh
+
+> PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 ###Cloning the repository###
 Now, it's time to set things up.
