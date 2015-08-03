@@ -51,13 +51,13 @@ After doing so, let's enforce a highstate against our client and set up everythi
 > \# sudo salt-call --local state.highstate
 
 You should have seen a bunch of stuff happen.. Some software get installed, some configurations happen, etc. One of the other things that
-happened, was that a cron task for the 'root' user was created that enforces a high state every hour (at 0 minutes on the clock). So, every
-hour moving forward, the configuration in /srv/salt will be applied to machine and enforced, ensuring the software remains installed, and
-the configurations in place. If you ever want to manually run Salt and not wait for the Cron job to run, do so with the last command you
-ran:
-> \# sudo salt-call --local state.highstate
+happened, was that a cron task for the 'root' user was created that enforces a high state every hour (at 0 minutes on the clock). 
 
-To delete any local changes you've made in /srv/salt, and pull down the latest updates from GitHub for this repository, run the following
+So, you're done! Every hour moving forward, the configuration in /srv/salt will be applied to machine and enforced, ensuring the
+software remains installed, and the configurations in place. If you ever want to manually run Salt and not wait for the Cron
+job to run, do so with the last command you ran above.
+
+To pull down the latest updates from this GitHub repo, run the following
 commands.. First go into the correct directory:
 > \# cd /srv/salt/
 
