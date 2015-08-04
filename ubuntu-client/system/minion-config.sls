@@ -1,5 +1,3 @@
-#Configure minion to be local only
-
 /etc/salt/minion:
   file.managed:
     - name: /etc/salt/minion
