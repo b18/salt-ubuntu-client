@@ -17,6 +17,7 @@ base:
     - ubuntu-client.pkgs.pac
     - ubuntu-client.pkgs.python-gpgme
     - ubuntu-client.pkgs.python-software-properties
+    - ubuntu-client.pkgs.salt-minion
     - ubuntu-client.pkgs.traceroute
     - ubuntu-client.pkgs.ufw
     - ubuntu-client.pkgs.vpnc

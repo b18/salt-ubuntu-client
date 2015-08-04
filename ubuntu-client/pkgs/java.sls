@@ -10,6 +10,7 @@ oracle-java8-license:
    cmd:
     - run
     - name: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+    - unless: dpkg -l | grep oracle-java8-installer
     - require:
       - pkgrepo: webupd8team-java-ppa
 
