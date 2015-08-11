@@ -2,6 +2,10 @@ iptables:
   pkg.installed:
     - name: iptables
 
+ipset:
+  pkg.installed:
+    - name: ipset
+
 /etc/iptables.sh:
   file.managed:
     - name: /etc/iptables.sh
@@ -11,6 +15,7 @@ iptables:
     - mode: 744
     - require:
       - pkg: iptables
+      - pkg: ipset
 
 iptables_enforce:
    cmd:
