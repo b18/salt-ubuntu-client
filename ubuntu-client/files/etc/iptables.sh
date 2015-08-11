@@ -38,18 +38,11 @@ ISO="af cn jp kp kr ru so"
 # Add each country's list of IPs to our geoblock IPSet list
 for country in $ISO
 do
-   for IP in $(wget -O - http://ipdeny.com/ipblocks/data/aggregated/"$country"-aggregated.zone)
+   for IP in $(/usr/bin/wget -O - http://ipdeny.com/ipblocks/data/aggregated/"$country"-aggregated.zone)
       do
          /sbin/ipset add geoblock $IP
       done
 done
 
-# Create RFC 1918 IPSet list
-# /sbin/ipset add loc 127.0.0.0/8
-# /sbin/ipset add loc 10.0.0.0/8
-# /sbin/ipset add loc 172.16.0.0/12
-# /sbin/ipset add loc 192.168.0.0/16
-
 # Deny outbound traffic to blacklisted countries.
 /sbin/iptables -I OUTPUT -m set --match-set geoblock dst -j DROP
-# /sbin/iptables -I OUTPUT -m set --match-set loc dst -j ACCEPT
