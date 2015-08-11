@@ -1,0 +1,6 @@
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+@reboot /etc/iptables.sh
+
+0 * * * * /usr/bin/salt-call --local state.highstate

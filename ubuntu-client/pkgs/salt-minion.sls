@@ -19,3 +19,13 @@ salt-minion-service:
   - name: salt-minion
   - require:
     - pkg: salt-minion
+
+# <--STEP FOUR-->
+# Configure minion
+/etc/salt/minion:
+  file.managed:
+    - name: /etc/salt/minion
+    - source: salt://ubuntu-client/files/etc/salt/minion
+    - user: root
+    - group: root
+    - mode: 644
