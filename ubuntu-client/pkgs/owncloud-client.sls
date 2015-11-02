@@ -3,6 +3,9 @@
 owncloud.key:
    cmd:
     - run
+{% if grains['osfinger'] == 'Ubuntu-15.10' %} # If Ubuntu 15.10 (Wily Werewolf)
+    - name: 'wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_15.10/Release.key | sudo apt-key add -'
+{% endif %}
 {% if grains['osfinger'] == 'Ubuntu-15.04' %} # If Ubuntu 15.04 (Vivid Vervet)
     - name: 'wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_15.04/Release.key | sudo apt-key add -'
 {% endif %}
@@ -19,6 +22,9 @@ owncloud.key:
     - user: root
     - group: root
     - mode: 644
+{% if grains['osfinger'] == 'Ubuntu-15.10' %} # If Ubuntu 15.10 (Wily Werewolf)
+    - source: salt://ubuntu-client/files/etc/apt/sources.list.d/owncloud-client-15.10.list
+{% endif %}
 {% if grains['osfinger'] == 'Ubuntu-15.04' %} # If Ubuntu 15.04 (Vivid Vervet)
     - source: salt://ubuntu-client/files/etc/apt/sources.list.d/owncloud-client-15.04.list
 {% endif %}
