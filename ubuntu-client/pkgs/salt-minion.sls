@@ -3,8 +3,8 @@
 saltstack.key:
    cmd:
     - run
-    - name: 'wget -q "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x4759FA960E27C0A6" -O- | sudo apt-key add -'
-    - unless: 'apt-key list | grep saltstack'
+    - name: 'wget -O - https://repo.saltstack.com/apt/ubuntu/ubuntu14/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -'
+    - unless: 'apt-key list | grep SaltStack Packaging Team'
 
 # <--STEP TWO-->
 # SaltStack Repo
