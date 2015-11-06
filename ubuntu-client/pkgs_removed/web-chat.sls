@@ -21,6 +21,10 @@ empathy:
   pkg.removed:
     - name: empathy
 
+pidgin:
+  pkg.removed:
+    - name: pidgin
+
 unity-scope-gdrive:
   pkg.removed:
     - name: unity-scope-gdrive
