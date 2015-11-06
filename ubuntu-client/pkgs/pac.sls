@@ -1,11 +1,18 @@
 # Install Pac Manager & requirements
 
-# Pac app
+# Install Latest Pac Manager if not already installed
 pac:
-  pkg.installed:
-    - name: pac
-    - sources:
-      - file: salt://ubuntu-client/media/pac-4.5.5.7-all.deb
+   cmd:
+    - run
+    - name: 'dpkg -i /srv/salt/ubuntu-client/media/pac-4.5.5.7-all.deb'
+    - unless: 'dpkg -l pac | grep 4.5.5.7'
+
+# Pac app
+#pac:
+#  pkg.installed:
+#    - name: pac
+#    - sources:
+#      - file: salt://ubuntu-client/media/pac-4.5.5.7-all.deb
 
 cu:
   pkg.installed:
