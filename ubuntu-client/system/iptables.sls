@@ -21,6 +21,6 @@ iptables_enforce:
    cmd:
     - run
     - name: cd /etc/ && ./iptables.sh
-    - unless: iptables -L | grep "match-set geoblock dst"
+    - unless: ipset list | grep /24
     - require:
       - file: /etc/iptables.sh

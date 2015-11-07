@@ -4,7 +4,7 @@ saltstack.key:
    cmd:
     - run
     - name: 'wget -O - https://repo.saltstack.com/apt/ubuntu/ubuntu14/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -'
-    - unless: 'apt-key list | grep SaltStack Packaging Team'
+    - unless: apt-key list | grep "SaltStack Packaging Team"
 
 # <--STEP TWO-->
 # SaltStack Repo
@@ -15,10 +15,10 @@ saltstack.key:
     - group: root
     - mode: 644
 {% if grains['osfinger'] == 'Ubuntu-15.10' %} # If Ubuntu 15.10 (Wily Werewolf)
-    - source: salt://ubuntu-client/files/etc/apt/sources.list.d/saltstack-15.04.list
+    - source: salt://ubuntu-client/files/etc/apt/sources.list.d/saltstack-14.04.list
 {% endif %}
 {% if grains['osfinger'] == 'Ubuntu-15.04' %} # If Ubuntu 15.04 (Vivid Vervet)
-    - source: salt://ubuntu-client/files/etc/apt/sources.list.d/saltstack-15.04.list
+    - source: salt://ubuntu-client/files/etc/apt/sources.list.d/saltstack-14.04.list
 {% endif %}
 {% if grains['osfinger'] == 'Ubuntu-14.04' %} # If Ubuntu 14.04 (Trusty Tahr)
     - source: salt://ubuntu-client/files/etc/apt/sources.list.d/saltstack-14.04.list

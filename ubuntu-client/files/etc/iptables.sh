@@ -1,7 +1,7 @@
 # !/bin/sh
 # Client IPTables Script
 # Written by Bradley Lankford
-# bradley@b18.co
+# bradleylankford18@gmail.com
 # Blocks all inbound traffic except established/related
 # Blocks all forward traffic (not a router)
 # Permits all outbound traffic except for specified countries assigned to
