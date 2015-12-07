@@ -1,39 +1,32 @@
 # !/bin/sh
-# Client IPTables Script
-# Written by Bradley Lankford
-# bradleylankford18@gmail.com
-# Blocks all inbound traffic except established/related
-# Blocks all forward traffic (not a router)
-# Permits all outbound traffic except for specified countries assigned to
-# 	ISO variable listed below
-# Uses IPDeny.com's aggregated country codes and IPSet (for speed) and
-# 	IPTables to do so.
-# For best results, schedule this script to run at least weekly, to pull
-#	down the latest IP block updates from IPDeny.com.
+# <--Managed by SaltStack-->
 
-# Resetting IPTables. Blocking all inbound/forward traffic, and allowing outbound.
+# Flush current rulesets
 /sbin/iptables -F
+
+# Allow in and out, but block forward traffic
 /sbin/iptables -P INPUT ACCEPT
-
-# Accept only inbound traffic to loopback or already established traffic. Allow all outbound.
-/sbin/iptables -A INPUT -i lo -j ACCEPT
-/sbin/iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 /sbin/iptables -P OUTPUT ACCEPT
-
-# Drop all other traffic
-/sbin/iptables -P INPUT DROP
 /sbin/iptables -P FORWARD DROP
 
 # Destroy existing IPSet lists, if they exist
 /sbin/ipset destroy geoblock
-/sbin/ipset destroy loc
 
 # Create new empty IPSet lists
 /sbin/ipset create geoblock hash:net
-/sbin/ipset create loc hash:net
 
-# List of country codes to block outbound traffic to.
-ISO="af cn jp kp kr ru so"
+# List of country codes to block outbound & inbound traffic to.
+ISO="af ca cn jp kp kr pl ru so tw"
+# AF = Afghanistan
+# CA = Canada
+# CN = China
+# JP = Japan
+# KP = South Korea
+# KR = North Korea
+# PL = Poland
+# RU = Russia
+# SO = Somalia
+# TW = Taiwan
 
 # Add each country's list of IPs to our geoblock IPSet list
 for country in $ISO
@@ -44,5 +37,6 @@ do
       done
 done
 
-# Deny outbound traffic to blacklisted countries.
+# Deny inbound & outbound traffic involving blacklisted countries.
 /sbin/iptables -I OUTPUT -m set --match-set geoblock dst -j DROP
+/sbin/iptables -I INPUT -m set --match-set geoblock src -j DROP
