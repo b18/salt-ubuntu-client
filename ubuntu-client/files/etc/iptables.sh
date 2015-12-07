@@ -16,17 +16,10 @@
 /sbin/ipset create geoblock hash:net
 
 # List of country codes to block outbound & inbound traffic to.
-ISO="af ca cn jp kp kr pl ru so tw"
-# AF = Afghanistan
-# CA = Canada
+ISO="cn kr ru"
 # CN = China
-# JP = Japan
-# KP = South Korea
 # KR = North Korea
-# PL = Poland
 # RU = Russia
-# SO = Somalia
-# TW = Taiwan
 
 # Add each country's list of IPs to our geoblock IPSet list
 for country in $ISO
