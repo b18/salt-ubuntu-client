@@ -15,7 +15,7 @@ base:
     - ubuntu-client.pkgs.keepass
     - ubuntu-client.pkgs.libreoffice
     - ubuntu-client.pkgs.nmap
-    - ubuntu-client.pkgs.owncloud-client
+    #    - ubuntu-client.pkgs.owncloud-client #Not installed by default
     - ubuntu-client.pkgs.pac
     - ubuntu-client.pkgs.python-gpgme
     - ubuntu-client.pkgs.python-software-properties
