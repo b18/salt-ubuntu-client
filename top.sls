@@ -31,6 +31,7 @@ base:
     - ubuntu-client.pkgs_removed.miscellaneous
     - ubuntu-client.pkgs_removed.ufw
     - ubuntu-client.pkgs_removed.web-chat
+    - ubuntu-client.pkgs_removed.whoopsie
 
     # System Config
     - ubuntu-client.system.cron

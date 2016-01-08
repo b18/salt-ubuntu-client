@@ -4,3 +4,4 @@
 
 [General]
 report_metrics=false
+report_crashes=false
