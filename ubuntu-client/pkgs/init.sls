@@ -13,5 +13,6 @@ include:
   - ubuntu-client.pkgs.python-software-properties
   - ubuntu-client.pkgs.salt-minion
   - ubuntu-client.pkgs.traceroute
+  - ubuntu-client.pkgs.virtualbox
   - ubuntu-client.pkgs.vpnc
   - ubuntu-client.pkgs.wireshark

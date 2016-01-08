@@ -4,7 +4,7 @@ freshplayerplugin.key:
    cmd:
     - run
     - name: 'wget -q "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x531EE72F4C9D234C" -O- | sudo apt-key add -'
-    - unless: 'apt-key list | grep nilarimogard_ubuntu_webupd8'
+    - unless: 'apt-key list | grep webupd8'
 
 # <--STEP TWO-->
 # FreshPlayer Plugin Repo

@@ -4,7 +4,7 @@ java.key:
    cmd:
     - run
     - name: 'wget -q "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0xC2518248EEA14886" -O- | sudo apt-key add -'
-    - unless: 'apt-key list | grep java'
+    - unless: 'apt-key list | grep webupd8'
 
 # <--STEP TWO-->
 # Java Repo

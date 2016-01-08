@@ -4,7 +4,7 @@ libreoffice.key:
    cmd:
     - run
     - name: 'wget -q "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x83FBA1751378B444" -O- | sudo apt-key add -'
-    - unless: 'apt-key list | grep libreoffice'
+    - unless: 'apt-key list | grep LibreOffice'
 
 # <--STEP TWO-->
 # LibreOffice Repo

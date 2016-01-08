@@ -4,7 +4,7 @@ keepass.key:
    cmd:
     - run
     - name: 'wget -q "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x7858088158B80F90" -O- | sudo apt-key add -'
-    - unless: 'apt-key list | grep keepass'
+    - unless: 'apt-key list | grep Julian'
 
 # <--STEP TWO-->
 # KeePass Repo

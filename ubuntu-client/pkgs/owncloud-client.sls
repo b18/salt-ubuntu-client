@@ -36,8 +36,8 @@ owncloud.key:
 
 # <--STEP THREE-->
 # Install OwnCloud-Client
-owncloud-client:
-  pkg.installed:
-    - name: owncloud-client
-    - require:
-      - file: /etc/apt/sources.list.d/owncloud-client.list
+#owncloud-client:
+#  pkg.installed:
+#    - name: owncloud-client
+#    - require:
+#      - file: /etc/apt/sources.list.d/owncloud-client.list
