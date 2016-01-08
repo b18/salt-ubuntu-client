@@ -1,6 +1,4 @@
 # <--Managed by SaltStack-->
-# Written by Bradley Lankford
-# bradleylankford18@gmail.com
 
 # Set up correct env variables
 SHELL=/bin/sh
