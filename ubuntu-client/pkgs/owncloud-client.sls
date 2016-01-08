@@ -4,13 +4,13 @@ owncloud.key:
    cmd:
     - run
 {% if grains['osfinger'] == 'Ubuntu-15.10' %} # If Ubuntu 15.10 (Wily Werewolf)
-    - name: 'wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_15.10/Release.key | sudo apt-key add -'
+    - name: 'wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_15.10/Release.key && sudo apt-key add - < Release.key'
 {% endif %}
 {% if grains['osfinger'] == 'Ubuntu-15.04' %} # If Ubuntu 15.04 (Vivid Vervet)
-    - name: 'wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_15.04/Release.key | sudo apt-key add -'
+    - name: 'wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_15.04/Release.key && sudo apt-key add - < Release.key'
 {% endif %}
 {% if grains['osfinger'] == 'Ubuntu-14.04' %} # If Ubuntu 14.04 (Trusty Tahr)
-    - name: 'wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_14.04/Release.key | sudo apt-key add -'
+    - name: 'wget http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_14.04/Release.key && sudo apt-key add - < Release.key'
 {% endif %}
     - unless: 'apt-key list | grep ownCloud'
 
