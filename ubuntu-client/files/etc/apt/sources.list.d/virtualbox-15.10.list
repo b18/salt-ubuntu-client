@@ -1,4 +1,4 @@
 # Managed by SaltStack
 # b18/ubuntu-client-salt
 
-deb http://download.virtualbox.org/virtualbox/debian vivid contrib
+deb http://download.virtualbox.org/virtualbox/debian wily contrib
