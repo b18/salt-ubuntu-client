@@ -25,13 +25,8 @@ base:
     - ubuntu-client.pkgs.vpnc
     - ubuntu-client.pkgs.wireshark
 
-    # Packages Removed
-    - ubuntu-client.pkgs_removed.avahi
-    - ubuntu-client.pkgs_removed.games
-    - ubuntu-client.pkgs_removed.miscellaneous
-    - ubuntu-client.pkgs_removed.ufw
-    - ubuntu-client.pkgs_removed.web-chat
-    - ubuntu-client.pkgs_removed.whoopsie
+    # Remove packages I don't use
+    - ubuntu-client.pkgs_removed
 
     # System Config
     - ubuntu-client.system.cron
