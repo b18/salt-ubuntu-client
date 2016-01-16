@@ -4,8 +4,5 @@
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
-# Force Git refresh every hour at 50 minutes past the hour
-50 * * * * cd /srv/salt && git fetch origin && git reset --hard origin/master
-
-# Then, enforce Salt highstate every hour
+# Enforce Salt highstate every hour
 0 * * * * /usr/bin/salt-call --local state.highstate
