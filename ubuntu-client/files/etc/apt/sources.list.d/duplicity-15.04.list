@@ -1,5 +1,0 @@
-# Managed by SaltStack
-# b18/ubuntu-client-salt
-
-deb http://ppa.launchpad.net/duplicity-team/ppa/ubuntu vivid main
-# deb-src http://ppa.launchpad.net/duplicity-team/ppa/ubuntu vivid main

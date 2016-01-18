@@ -1,4 +1,4 @@
-# <--Managed by SaltStack-->
+# Managed by SaltStack
 
 # Set up correct env variables
 SHELL=/bin/sh

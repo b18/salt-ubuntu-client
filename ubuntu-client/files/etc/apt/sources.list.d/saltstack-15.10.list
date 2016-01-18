@@ -1,5 +1,3 @@
 # Managed by SaltStack
-# b18/ubuntu-client-salt
 
-deb http://repo.saltstack.com/apt/ubuntu/ubuntu15/latest wily main
-# deb-src http://ppa.launchpad.net/saltstack/salt/ubuntu wily main
+deb http://repo.saltstack.com/apt/ubuntu/ubuntu14/latest trusty main

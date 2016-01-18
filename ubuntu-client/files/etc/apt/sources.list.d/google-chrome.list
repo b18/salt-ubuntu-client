@@ -1,4 +1,3 @@
 # Managed by SaltStack
-# b18/ubuntu-client-salt
 
 deb http://dl.google.com/linux/chrome/deb/ stable main

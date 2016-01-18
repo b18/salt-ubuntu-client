@@ -1,38 +1,14 @@
-# Salt Top Config
-# Add a comment (#) symbol before any of the lines
-# beginning with a dash (-) if you wish to disable
-# the relevant Salt state.
-
 base:
 
   '*':
-    # Packages
-    - ubuntu-client.pkgs.duplicity
-    - ubuntu-client.pkgs.freshplayerplugin
-    - ubuntu-client.pkgs.google-chrome-stable
-    - ubuntu-client.pkgs.htop
-    - ubuntu-client.pkgs.java
-    - ubuntu-client.pkgs.keepass
-    - ubuntu-client.pkgs.libreoffice
-    - ubuntu-client.pkgs.nmap
-    - ubuntu-client.pkgs.owncloud-client
-    - ubuntu-client.pkgs.pac
-    - ubuntu-client.pkgs.python-gpgme
-    - ubuntu-client.pkgs.python-software-properties
-    - ubuntu-client.pkgs.salt-minion
-    - ubuntu-client.pkgs.traceroute
-    - ubuntu-client.pkgs.virtualbox
-    - ubuntu-client.pkgs.vpnc
-    - ubuntu-client.pkgs.wireshark
+    - ubuntu-client.pkgs.installed # Installed pkgs
+    - ubuntu-client.pkgs.latest # Up-to-date pkgs
+    - ubuntu-client.pkgs.repos # Added Repos
 
     # Remove packages I don't use
-    - ubuntu-client.pkgs_removed
+    - ubuntu-client.pkgs.removed # Removed pkgs
 
     # System Config
-    - ubuntu-client.system.cron
-    - ubuntu-client.system.diagnostics
-    - ubuntu-client.system.iptables
-    - ubuntu-client.system.lightdm
-    - ubuntu-client.system.online-search
-    - ubuntu-client.system.sysctl
-    - ubuntu-client.system.unattended-upgrades
+    - ubuntu-client.system.cron # Cron settings
+    - ubuntu-client.system.privacy # Privacy settings
+    - ubuntu-client.system.security # Security settings

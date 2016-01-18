@@ -1,15 +1,5 @@
 # Remove packages that I don't use/need/want.
-
-pkg-removed-games:
-  pkg.removed:
-    - pkgs:
-      - aisleriot
-      - gnome-mahjongg
-      - gnome-mines
-      - gnome-sudoku
-      - gnomine
-
-pkgs-removed-media:
+pkg-removed:
   pkg.removed:
     - pkgs:
       - account-plugin-aim
@@ -18,19 +8,22 @@ pkgs-removed-media:
       - account-plugin-jabber
       - account-plugin-salut
       - account-plugin-yahoo
+      - aisleriot
+      - avahi-daemon # .local domain issues
       - empathy
       - flashplugin-installer
+      - gnome-mahjongg
+      - gnome-mines
+      - gnome-sudoku
+      - gnomine
       - pidgin
+      - ppp
+      - pppoeconf
       - rhythmbox
       - thunderbird
       - thunderbird-gnome-support
       - thunderbird-locale-en
       - transmission-common
-
-pkgs-removed-system:
-  pkg.removed:
-    - pkgs:
-      - avahi-daemon # .local domain issues
-      - pppoeconf
       - ufw
+      - unity-scope-zotero
       - whoopsie # Error reporting

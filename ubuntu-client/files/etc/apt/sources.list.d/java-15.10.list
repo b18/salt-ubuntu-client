@@ -1,5 +1,0 @@
-# Managed by SaltStack
-# b18/ubuntu-client-salt
-
-deb http://ppa.launchpad.net/webupd8team/java/ubuntu wily main
-# deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu wily main
