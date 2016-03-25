@@ -1,5 +1,5 @@
 # Remove packages that I don't use/need/want.
-pkg-removed:
+remove-pkgs:
   pkg.removed:
     - pkgs:
       - account-plugin-aim
