@@ -1,3 +1,0 @@
-# Managed by SaltStack
-
-deb http://repo.saltstack.com/apt/ubuntu/ubuntu14/latest trusty main
