@@ -8,7 +8,8 @@ base:
     - ubuntu-client.pkgs.installed.virtualbox
     - ubuntu-client.pkgs.latest.freshplayerplugin
     - ubuntu-client.pkgs.latest.google-chrome
-    - ubuntu-client.pkgs.removed # Removed pkgs
-    - ubuntu-client.system.cron # Cron settings
-    - ubuntu-client.system.privacy # Privacy settings
-    - ubuntu-client.system.security # Security settings
+    - ubuntu-client.pkgs.removed
+    - ubuntu-client.system.cron
+    - ubuntu-client.system.iptables
+    - ubuntu-client.system.lightdm
+    - ubuntu-client.system.sysctl
